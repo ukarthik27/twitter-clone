@@ -5,8 +5,11 @@
   overflow-y: scroll;
 }
 
-.feed::webkit-scrollbar {
+.feed::-webkit-scrollbar {
   display: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
 }
 
 .feed {
