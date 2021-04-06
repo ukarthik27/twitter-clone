@@ -19,14 +19,16 @@ function Feed() {
         <h2>Home</h2>
       </div>
       <TweetBox />
-      {/* <Post
-        displayName="Miles Morales"
-        username="milesmorales"
-        verified
-        text="It's a leap of faith"
-        avatar="https://images4.alphacoders.com/960/thumbbig-960281.jpg"
-        image="https://i.pinimg.com/originals/c1/cf/34/c1cf34caee3bc0c1c3b8559c76313fd2.gif"
-      /> */}
+      {!posts.length && (
+        <Post
+          displayName="Miles Morales"
+          username="milesmorales"
+          verified
+          text="It's a leap of faith"
+          avatar="https://images4.alphacoders.com/960/thumbbig-960281.jpg"
+          image="https://i.pinimg.com/originals/c1/cf/34/c1cf34caee3bc0c1c3b8559c76313fd2.gif"
+        />
+      )}
       {posts.map((post) => (
         <Post
           displayName={post.displayName}
