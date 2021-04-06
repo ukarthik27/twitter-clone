@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarOption from "./SidebarOption";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -13,17 +13,58 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
 
 function Sidebar() {
+  const [selectedOption, setOption] = useState("");
   return (
     <div className="sidebar">
       <TwitterIcon className="sidebar__twitterIcon" />
-      <SidebarOption active={true} text="Home" Icon={HomeIcon} />
-      <SidebarOption text="Explore" Icon={SearchIcon} />
-      <SidebarOption text="Notifications" Icon={NotificationsNoneIcon} />
-      <SidebarOption text="Messages" Icon={MailOutlineIcon} />
-      <SidebarOption text="Bookmarks" Icon={BookmarkBorderIcon} />
-      <SidebarOption text="Lists" Icon={ListAltIcon} />
-      <SidebarOption text="Profile" Icon={PermIdentityIcon} />
-      <SidebarOption text="More" Icon={MoreHorizIcon} />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Home"
+        Icon={HomeIcon}
+        clickHandler={(e) => setOption("Home")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Explore"
+        Icon={SearchIcon}
+        clickHandler={(e) => setOption("Explore")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Notifications"
+        Icon={NotificationsNoneIcon}
+        clickHandler={(e) => setOption("Notifications")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Messages"
+        Icon={MailOutlineIcon}
+        clickHandler={(e) => setOption("Messages")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Bookmarks"
+        Icon={BookmarkBorderIcon}
+        clickHandler={(e) => setOption("Bookmarks")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Lists"
+        Icon={ListAltIcon}
+        clickHandler={(e) => setOption("Lists")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="Profile"
+        Icon={PermIdentityIcon}
+        clickHandler={(e) => setOption("Profile")}
+      />
+      <SidebarOption
+        selectedOption={selectedOption}
+        text="More"
+        Icon={MoreHorizIcon}
+        clickHandler={(e) => setOption("More")}
+      />
       <Button variant="outlined" className="sidebar__tweet" fullWidth>
         Tweet
       </Button>

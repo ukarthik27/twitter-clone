@@ -12,24 +12,28 @@
 
 .post__body > img {
   border-radius: 20px;
-  width: 100%;
+  /* width: 100%; */
+  max-width: 520px;
 }
 
 .post__footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
+  max-width: 425px;
 }
 
 .post__badge {
   font-size: 14px !important;
   color: var(--twitter-color);
+  margin-right: 3px;
 }
 
 .post_headerSpecial {
   font-weight: 600;
   font-size: 12px;
   color: gray;
+  display: inline-flex;
 }
 
 .post__headerText > h3 {
@@ -41,7 +45,9 @@
   margin-bottom: 10px;
   font-size: 15px;
 }
-
+.post__headerDescription > p {
+  padding: 5px 0;
+}
 .post__avatar {
   padding: 20px;
 }

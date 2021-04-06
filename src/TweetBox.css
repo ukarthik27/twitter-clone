@@ -21,6 +21,10 @@
   border: none;
 }
 
+.tweetBox__input > input:focus {
+  outline: none;
+}
+
 .tweetBox__tweetButton {
   background-color: var(--twitter-color) !important;
   border: none !important;
@@ -36,5 +40,9 @@
 
 .tweetBox__imageInput {
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
+}
+
+.tweetBox__imageInput:focus {
+  outline: none;
 }
